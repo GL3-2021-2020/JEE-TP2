@@ -1,6 +1,4 @@
-package web.etudiant;
-
-import javax.servlet.RequestDispatcher;
+package web;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,13 +7,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "show_etudiant", urlPatterns = {"/etudiantlist"})
-public class ShowEtudiant extends HttpServlet {
+@WebServlet (name = "cs",urlPatterns = {"/"})
+public class FirstServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("data", Etudiant.etudiantList);
-        RequestDispatcher rd =
-                req.getRequestDispatcher("etudiant/affiche.jsp");
-        rd.forward(req, resp);
+        String nom = req.getParameter("nom");
+
+        PrintWriter out = resp.getWriter();
+        out.println("<html><body>");
+        out.println("<h1>"+nom+"</h1>");
+        out.println("</body>");
+        out.println("</html>");
     }
 }

@@ -17,9 +17,8 @@ public class EtudiantApi extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
-
         if (email.equals(Valid_email) && password.equals(Valid_password))
-            resp.sendRedirect("insertionEtudiant.jsp");
+            resp.sendRedirect("insert.jsp");
         else
             resp.sendRedirect("echec.html");
     }

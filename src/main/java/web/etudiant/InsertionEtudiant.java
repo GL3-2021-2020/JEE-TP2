@@ -10,14 +10,14 @@ import java.util.ArrayList;
 
 @WebServlet(name = "cs", urlPatterns = {"/etudiantapi"})
 public class InsertionEtudiant extends HttpServlet {
-    public static ArrayList<Etudiant> etudiantList = new ArrayList<>();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String cin = req.getParameter("cin");
         String name = req.getParameter("name");
         String lastName = req.getParameter("lastName");
-        Etudiant et = new Etudiant(name, lastName);
-        etudiantList.add(et);
+        Etudiant et = new Etudiant(cin, name, lastName);
+        Etudiant.etudiantList.add(et);
         resp.sendRedirect("etudiantlist");
     }
 }
