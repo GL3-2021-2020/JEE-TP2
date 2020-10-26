@@ -15,7 +15,7 @@ public class ShowEtudiant extends HttpServlet {
         PrintWriter out = resp.getWriter();
 
         for (Etudiant it : InsertionEtudiant.etudiantList) {
-            out.println("name = "+ it.lastName + " lastName = " + it.lastName );
+            out.println("name = " + it.lastName + " lastName = " + it.lastName);
         }
     }
 }

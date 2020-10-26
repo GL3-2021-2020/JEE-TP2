@@ -1,4 +1,5 @@
 package web.etudiant;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 @WebServlet(name = "cs", urlPatterns = {"/etudiantapi"})
 public class InsertionEtudiant extends HttpServlet {
     public static ArrayList<Etudiant> etudiantList = new ArrayList<>();
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");

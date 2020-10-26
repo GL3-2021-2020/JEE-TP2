@@ -6,13 +6,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 
 @WebServlet(name = "auth", urlPatterns = {"/authapi"})
 public class EtudiantApi extends HttpServlet {
     private static final String Valid_email = "wadhah.mahrouk@gmail.com";
     private static final String Valid_password = "123456";
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String email = req.getParameter("email");
