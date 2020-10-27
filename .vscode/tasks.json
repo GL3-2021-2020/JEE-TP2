@@ -6,13 +6,14 @@
     {
       "label": "deploy",
       "type": "shell",
-      "command": "mvn tomcat7:deploy",
-      "group": "build"
+      "command": "mvn tomcat7:redeploy",
+      "group": "build",
+      "problemMatcher": []
     },
     {
       "label": "watch",
       "type": "shell",
-      "command": "find src/ | entr sh -c 'mvn tomcat7:deploy'",
+      "command": "find src/ | entr sh -c 'mvn tomcat7:redeploy'",
       "group": "build",
       "problemMatcher": []
     }
