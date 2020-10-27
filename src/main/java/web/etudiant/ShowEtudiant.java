@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "show_etudiant", urlPatterns = { "/etudiantlist" })
 public class ShowEtudiant extends HttpServlet {
+    private static final long serialVersionUID = 7605123791864213859L;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("data", Etudiant.etudiantList);

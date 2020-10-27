@@ -9,6 +9,7 @@ import java.io.IOException;
 
 @WebServlet(name = "cs", urlPatterns = { "/etudiantapi" })
 public class InsertionEtudiant extends HttpServlet {
+    private static final long serialVersionUID = -537651513514806891L;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

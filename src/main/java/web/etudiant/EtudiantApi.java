@@ -7,10 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
-@WebServlet(name = "auth", urlPatterns = {"/authapi"})
+@WebServlet(name = "auth", urlPatterns = { "/authapi" })
 public class EtudiantApi extends HttpServlet {
-	private static final String Valid_email = "wadhah.mahrouk@gmail.com";
+    private static final long serialVersionUID = 7577501469257262312L;
+    private static final String Valid_email = "wadhah.mahrouk@gmail.com";
     private static final String Valid_password = "123456";
 
     @Override
